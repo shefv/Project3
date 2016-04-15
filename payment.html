@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+    <meta charset="utf-8">
+    <title> Payment Form </title>
+</html>
+
+
+   <body>
+
+
+    <h1> Payment Form </h1> <br>
+   <form action ="http://libertyville.rice.iit.edu/scripts/formscript.php"
+   method="post">
+
+
+<!-- Box is created around tags -->
+
+<fieldset>
+  <legend>My Information
+  </legend> 
+    <br>
+
+
+     <label> First Name:   
+    	      <input type="text" name="first_name_field" id=
+            "form-firstname" maxlength="50"> 
+    </label> <br><br>
+     <label> Last Name: 
+    	      <input type="text" name="last_name_field" id=
+    	      "form-lastname"  maxlength="50"> 
+    </label> <br><br>
+    <label> Phone Number: 
+   	           <input type="text" name="phone_field" id=
+   	           "form-phonenumber" maxlength="50"> 
+    </label>
+
+   <p> <label> Email Address: 
+   	         <input type="text" name="email_field" id="form-email" value="example@yahoo.com" maxlength="50">
+   </p> 
+ </label>
+
+  <!--Radio Buttons implemented for Gender-->
+   Gender: 
+   <label><input type ="radio" name="gender_field" checked value="Male"> Male
+   </label>
+   <label><input type ="radio" name="gender_field" value="Female"> Female     
+   </label>
+   
+  <br>
+
+  <!-- Drop down menu implemented for age -->
+  <p> Age: <br>
+  <select name="age_field">
+   
+         <option selected="selected" value="<18"> Under 18 
+         </option>
+         <option value="18-24 years old"> 18 - 24 
+         </option>
+         <option value="25-34 years old"> 25 - 34 
+         </option>
+         <option value="35-44 years old"> 35 - 44 
+         </option>
+         <option value="45-54 years old"> 45 - 54 
+         </option>
+         <option value="55-64 years old"> 55 - 64 
+         </option>
+         <option value="65 and above"> 65 and over
+         </option>
+ </select>
+</p>
+</fieldset>
+<br>
+    
+<fieldset>   
+<legend>  My Availability 
+</legend>    
+
+     <!-- Checkboxes implemented for days of the week -->  
+      <p> Days Available:<br>
+
+       <label><input type="checkbox" name="available_field[]" value="Sunday"> Sunday 
+ 	     </label><br>
+       <label> <input type="checkbox" name="available_field[]" value="Monday"> Monday
+      </label> <br>
+       <label> <input type="checkbox" name="available_field[]" value="Tuesday"> Tuesday 
+       </label><br>
+       <label> <input type="checkbox" name="available_field[]" value="Wednesday"> Wednesday 
+       </label><br>
+       <label> <input type="checkbox" name="available_field[]" value="Thursday"> Thursday
+       </label><br>
+       <label> <input type="checkbox" name="available_field[]" value="Friday"> Friday 
+       </label><br>
+       <label> <input type="checkbox" name="available_field[]" value="Saturday"> Saturday
+       </label> </p> <br> 
+
+
+        <p><label><h3>Any Comments?: </h3>
+        <textarea name="comments_field" rows="5" placeholder="Additional questions or concerns may be entered here"></textarea>          
+      </p></label></fieldset>
+
+
+       <!-- Sending information and sumbitting form -->
+       <p> <input type="submit" value ="Submit My Form"> 
+
+       <!-- Hidden Control implemented for a hidden message -->
+       <input type ="hidden" name="hidden_field" value="svarma1"
+
+
+
+</html>
+
