@@ -2,32 +2,26 @@
 
 <html>
     <meta charset="utf-8">
-    <title> Payment Form </title>
+    <title> myIllinoisTech </title>
 </html>
-
-
-   <body>
-
-
-    <h1> Payment Form </h1> <br>
-   
-
-
-<!-- Box is created around tags -->
-
+<body>
+<div class ="main_header">
+<h1 id="my"> myIIT </h1> 
+<h2> Account Payment Form </h2> <br>
+</div>
+   <!-- Box is created around tags -->
+<!--Student information starts below-->
 <fieldset>
-  <legend>Student Information
+  <legend><div>Student Information</div>
   </legend> 
-    <br>
-
-
-     <label> First Name:   
-    	      <input type="text" name="first_name_field" id=
-            "form-firstname" maxlength="50"> 
-    </label> <br><br>
-     <label> Last Name: 
-    	      <input type="text" name="last_name_field" id=
-    	      "form-lastname"  maxlength="50"> 
+     <label> Name on Account:   
+    	      <input type="text" name="_name_field" id=
+            "form-name"> 
+    </label> 
+	<br> </br>
+     <label> Payment Amount: 
+    	      <input type="text" name="amount_field" id=
+    	      "form-amount"  maxlength="50"> 
     </label> <br><br>
     <label> Phone Number: 
    	           <input type="text" name="phone_field" id=
@@ -47,17 +41,40 @@
    </label>
 </fieldset>
 <br>
-    
+    <!--Payment information starts below-->
+	
+	<fieldset>
+  <legend><div>Payment Information</div>
+  </legend> 
+     <label> Name on Account:   
+    	      <input type="text" name="_name_field" id=
+            "form-name"> 
+    </label> 
+	<br> </br>
+     <label> Payment Amount: 
+    	      <input type="text" name="amount_field" id=
+    	      "form-amount"  maxlength="50"> 
+    </label> <br><br>
+    <label> Phone Number: 
+   	           <input type="text" name="phone_field" id=
+   	           "form-phonenumber" maxlength="50"> 
+    </label>
+
+   <p> <label> Email Address: 
+   	         <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50">
+   </p> 
+ </label>
+
+ </fieldset>
 
 
 
        <!-- Sending information and sumbitting form -->
        <p> <input type="submit" value ="Submit My Form"> 
 
-       <!-- Hidden Control implemented for a hidden message -->
-       <input type ="hidden" name="hidden_field" value="svarma1"
+      
 
-
-
+</div>
+</body>
 </html>
 
