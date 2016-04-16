@@ -2,127 +2,102 @@
 
 <html>
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
 	
-    <title> myIllinoisTech </title>
+  <title> myIllinoisTech </title>
 	</head>
 </html>
+
 <body>
-<div class ="main_header">
-<h1 id="my"> myIIT </h1> 
-<h2> Account Payment Form </h2> <br>
-</div>
+	<div id="my" class ="main_header">
+		<h1> myIIT </h1>
+		<h2> Account Payment Form </h2>
+	</div>
    <!-- Box is created around tags -->
 <!--Student information starts below-->
-<fieldset>
-  <legend><div>Student Information</div>
-  </legend> 
-     <label> Full Name:   
-    	      <input type="text" name="_name_field" id=
-            "form-name"> 
-    </label> 
-	<br> </br>
-     <label> Billing Address: 
-    	      <input type="text" name="address_field" id=
-    	      "form-address"> 
-    </label> <br> </br>
-    <label> City: 
-   	           <input type="text" name="city_field" id=
-   	           "form-city"> 
-    </label>
-	<label> State: 
-   	           <input type="text" name="state_field" id=
-   	           "form-state" maxlength="2"> 
-    </label>
-	<label> Postal Code: 
-   	           <input type="text" name="postal_field" id=
-   	           "form-postal" maxlength="5"> 
-    </label>
+  <fieldset>
 
-   
+	  <legend>Student Information</legend>
+
+     <label> Full Name:   
+       <input type="text" name="_name_field" id= "form-name"/>
+     </label>
+
+     <label> Billing Address: 
+       <input type="text" name="address_field" id= "form-address"/>
+     </label>
+
+     <label> City:
+   	   <input type="text" name="city_field" id= "form-city"/>
+     </label>
+
+	   <label> State:
+   	   <input type="text" name="state_field" id= "form-state" maxlength="2"/>
+     </label>
+
+	   <label> Postal Code:
+   	   <input type="text" name="postal_field" id= "form-postal" maxlength="5"/>
+     </label>
 
   <!-- Drop down menu implemented for semester -->
-   <p> Semester
-  <select name="sem_field">
-   
-         <option selected="selected" value="sem">  
-         </option>
-         <option value="Fall '15"> Fall 2015
-         </option>
-         <option value="Spring '16"> Spring 2016 
-         </option>
- </select>
-</p>
-</fieldset>
-<br>
+     <p> Semester </p>
+	   <select name="sem_field">
+         <option selected="selected" value="sem"> </option>
+         <option value="Fall '15"> Fall 2015 </option>
+         <option value="Spring '16"> Spring 2016 </option>
+     </select>
+  </fieldset>
+
     <!--Payment information starts below-->
-	
 	<fieldset>
-  <legend><div>Payment Information</div>
-  </legend> 
+    <legend>Payment Information</legend>
      <label> Payment Date:   
-    	      <input type="date" name="date_field" id=
-            "form-date"> 
-    </label> 
-	<br> </br>
+       <input type="date" name="date_field" id= "form-date"/>
+     </label>
+
      <label> Payment Amount: 
-    	      <input type="text" name="amount_field" id=
-    	      "form-amount"  maxlength="50"> 
-    </label> <br>
+       <input type="text" name="amount_field" class= "form-amount"  maxlength="50"/>
+     </label>
 	
-    <p> Account Type:
-  <select name="account_field">
-   
-         <option selected="selected" value="acc">  
-         </option>
-         <option value="Checking"> Checking 
-         </option>
-         <option value="Savings"> Savings
-         </option>
- </select>
-</p>
+     <p> Account Type: </p>
+     <select name="account_field">
+       <option selected="selected" value="acc">  </option>
+       <option value="Checking"> Checking </option>
+       <option value="Savings"> Savings  </option>
+     </select>
 
-<label> Routing Number: 
-    	      <input type="text" name="routing_field" id=
-    	      "form-routing"  maxlength="9"> 
-    </label> <br> </br>
+     <label> Routing Number:
+       <input type="text" name="routing_field" id= "form-routing"  maxlength="9"/>
+     </label>
 	
-	<label> Account Number: 
-    	      <input type="text" name="number_field" id=
-    	      "form-number"  maxlength="12"> 
-    </label> <br> 
+	   <label> Account Number:
+       <input type="text" name="number_field" id= "form-number"  maxlength="12"/>
+     </label>
 
- <p> <label> Email Address: 
-   	         <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50">
-   </p> 
- </label>
+		 <label> Email Address:
+   	   <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50"/>
+     </label>
+  </fieldset>
 
- </fieldset>
 <!-- Reviewing details from below-->
-<br></br>
-<fieldset>
-  <legend><div>Review Information</div>
-  </legend> 
-     <label> Payment Amount:   
-    	      <input type="text" name="amount_field" id=
-            "form-amount" value ="101.00"> 
-    </label> 
-	
-   <p> <label> Payment Type: 
-   	         <input type="text" name="type_field" id="form-type" value="Checking or Savings" maxlength="50">
-   </p> 
- </label>
 
- </fieldset>
+  <fieldset>
+    <legend>Review Payment Information</legend>
 
+    <label> Payment Amount:
+      <input type="text" name="amount_field" class= "form-amount" value ="101.00"/>
+    </label>
+
+    <label> Payment Type:
+   	  <input type="text" name="type_field" id="form-type" value="Checking or Savings" maxlength="50"/>
+    </label>
+  </fieldset>
 
        <!-- Sending information and sumbitting form -->
-       <p> <input type="submit" value ="Submit My Payment"> 
+  <input type="submit" value ="Submit Payment">
 
-      
-
-</div>
 </body>
+
 </html>
 
