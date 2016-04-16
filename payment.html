@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 
 <html>
+<head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+	
     <title> myIllinoisTech </title>
+	</head>
 </html>
 <body>
 <div class ="main_header">
@@ -14,31 +18,42 @@
 <fieldset>
   <legend><div>Student Information</div>
   </legend> 
-     <label> Name on Account:   
+     <label> Full Name:   
     	      <input type="text" name="_name_field" id=
             "form-name"> 
     </label> 
 	<br> </br>
-     <label> Payment Amount: 
-    	      <input type="text" name="amount_field" id=
-    	      "form-amount"  maxlength="50"> 
-    </label> <br><br>
-    <label> Phone Number: 
-   	           <input type="text" name="phone_field" id=
-   	           "form-phonenumber" maxlength="50"> 
+     <label> Billing Address: 
+    	      <input type="text" name="address_field" id=
+    	      "form-address"> 
+    </label> <br> </br>
+    <label> City: 
+   	           <input type="text" name="city_field" id=
+   	           "form-city"> 
+    </label>
+	<label> State: 
+   	           <input type="text" name="state_field" id=
+   	           "form-state" maxlength="2"> 
+    </label>
+	<label> Postal Code: 
+   	           <input type="text" name="postal_field" id=
+   	           "form-postal" maxlength="5"> 
     </label>
 
-   <p> <label> Email Address: 
-   	         <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50">
-   </p> 
- </label>
+   
 
-  <!--Radio Buttons implemented for Gender-->
-   Term: 
-   <label><input type ="radio" name="sem_field" checked value="Spring"> Spring'16
-   </label>
-   <label><input type ="radio" name="sem_field" value="Fall"> Fall'16     
-   </label>
+  <!-- Drop down menu implemented for semester -->
+   <p> Semester
+  <select name="sem_field">
+   
+         <option selected="selected" value="sem">  
+         </option>
+         <option value="Fall '15"> Fall 2015
+         </option>
+         <option value="Spring '16"> Spring 2016 
+         </option>
+ </select>
+</p>
 </fieldset>
 <br>
     <!--Payment information starts below-->
@@ -46,21 +61,39 @@
 	<fieldset>
   <legend><div>Payment Information</div>
   </legend> 
-     <label> Name on Account:   
-    	      <input type="text" name="_name_field" id=
-            "form-name"> 
+     <label> Payment Date:   
+    	      <input type="date" name="date_field" id=
+            "form-date"> 
     </label> 
 	<br> </br>
      <label> Payment Amount: 
     	      <input type="text" name="amount_field" id=
     	      "form-amount"  maxlength="50"> 
-    </label> <br><br>
-    <label> Phone Number: 
-   	           <input type="text" name="phone_field" id=
-   	           "form-phonenumber" maxlength="50"> 
-    </label>
+    </label> <br>
+	
+    <p> Account Type:
+  <select name="account_field">
+   
+         <option selected="selected" value="acc">  
+         </option>
+         <option value="Checking"> Checking 
+         </option>
+         <option value="Savings"> Savings
+         </option>
+ </select>
+</p>
 
-   <p> <label> Email Address: 
+<label> Routing Number: 
+    	      <input type="text" name="routing_field" id=
+    	      "form-routing"  maxlength="9"> 
+    </label> <br> </br>
+	
+	<label> Account Number: 
+    	      <input type="text" name="number_field" id=
+    	      "form-number"  maxlength="12"> 
+    </label> <br> 
+
+ <p> <label> Email Address: 
    	         <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50">
    </p> 
  </label>
@@ -71,22 +104,13 @@
 <fieldset>
   <legend><div>Review Information</div>
   </legend> 
-     <label> Name on Account:   
-    	      <input type="text" name="_name_field" id=
-            "form-name"> 
-    </label> 
-	<br> </br>
-     <label> Payment Amount: 
+     <label> Payment Amount:   
     	      <input type="text" name="amount_field" id=
-    	      "form-amount"  maxlength="50"> 
-    </label> <br><br>
-    <label> Phone Number: 
-   	           <input type="text" name="phone_field" id=
-   	           "form-phonenumber" maxlength="50"> 
-    </label>
-
-   <p> <label> Email Address: 
-   	         <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50">
+            "form-amount" value ="101.00"> 
+    </label> 
+	
+   <p> <label> Payment Type: 
+   	         <input type="text" name="type_field" id="form-type" value="Checking or Savings" maxlength="50">
    </p> 
  </label>
 
@@ -94,7 +118,7 @@
 
 
        <!-- Sending information and sumbitting form -->
-       <p> <input type="submit" value ="Submit My Form"> 
+       <p> <input type="submit" value ="Submit My Payment"> 
 
       
 
