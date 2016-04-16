@@ -1,0 +1,163 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/**********CUSTOM GLOBAL STYLES***********/
+@font-face {
+  font-family: futura;
+  src: local("fonts/Futura/FUTURAB.TTF"),
+  local("fonts/Century Schoolbook/SCHLBKB.TTF");
+  font-weight: bold;
+}
+/*Typgraphic scale*/
+
+
+/*Base styles*/
+body {
+  font-family: 'Futura', sans-serif;
+  font-size: 1.1em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: .5em;
+}
+
+span {
+  color: crimson;
+  font-size: 1.5em;
+}
+
+
+/*Classes and ids for layout*/
+#banner {
+  background-color: black;
+  color:ghostwhite;
+  padding: 1em;
+  text-align: center;
+}
+
+
+.wrapper {
+  background-color: rgba(10,10,10, .4);
+  padding: 2em;
+}
+
+.wrapper label {
+  color: ghostwhite;
+}
+
+.wrapper input {
+  color: white;
+  display: block;
+  margin: 1em 0;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: .5em;
+  border-radius: .5em;
+}
+
+/*Specific to certain pages*/
+
+/*Login*/
+.login {
+  max-width: 40em;
+}
+
+.logo {
+  font-family: arial, sans-serif;
+  font-size: 3em;
+  margin-bottom: .25em;
+  margin-bottom: .25em;
+}
+
+.logo img{
+   width: 100%;
+}
+
+.citybackground {
+  background: url("images/tube.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*Portal Dashboard*/
+#main-container{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  max-width: 60em;
+  height: auto;
+  margin: 0 auto;
+}
+
+.sections {
+  width: 100%;
+  overflow: auto;
+  height: auto;
+  padding: 1em 1em;
+  background: linear-gradient(to bottom, #45484d 0%,rgba(0,0,0, .6)100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+.sections a {
+  display: block;
+  font-size: .85em;
+  line-height: 2em;
+  color: skyblue;
+  text-shadow: black 1px 1px;
+  text-decoration: none;
+}
+
+
+.sections a:hover {
+  color: limegreen;
+}
+
+.sections img {
+  display: none;
+}
+
+
+.tubewhite {
+  background: url("images/tubewhite.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*For larger screens*/
+@media screen and (min-width: 21.25em) {
+  .sections img {
+    float: right;
+    position: relative;
+    top: 1em;
+    display: inline;
+  }
+}
+
+
+@media screen and (min-width: 37.5em) {
+  
+  .wrapper {
+    margin: 2em;
+    border: 1px solid;
+    border-radius: .5em;
+  }
+  
+  .sections {
+    align-self: flex-end;
+    width: 35%;
+    height: auto;
+    margin: 1em;
+    padding: 1em 1em;
+    background-color: rgba(45, 45, 45, .5);
+    border-radius: 10px;
+
+    font-family: 'Futura', sans-serif;
+
+  }
+  
+}
