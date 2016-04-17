@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+  <link rel="stylesheet" href="screen.css">
+  <title>myIllinoisTech</title>
+</head>
+<body class="tubewhite">
+  <div id="banner">
+    my<span>IllinoisTech</span><h1>Payment Information</h1>
+  </div>
+  <div class="wrapper" id="payment_page">
+		<form id="select_payment">
+		<fieldset>
+		<legend><h2>Account Payment</h2></legend>
+		<div>Select Payment Method</div>
+			<label for="p_amount">Payment Amount:</label>
+			<div id="p_amount">$500.00
+		</div>
+		<div>Payment Method:
+		    <select name="method">
+				<option value="Checking/Savings"> Checking/Savings </option>
+				<option value="Credit_Card"> Credit Card  </option>
+			</select>
+		</div>
+	</fieldset>
+	</form>
 	
-  <title> myIllinoisTech </title>
-	</head>
-</html>
-
-<body>
-	<div id="my" class ="main_header">
-		<h1> myIIT </h1>
-		<h2> Account Payment Form </h2>
-	</div>
-   <!-- Box is created around tags -->
+<!-- Box is created around tags -->
 <!--Student information starts below-->
+  <form id="student_info">
   <fieldset>
+	<legend>Student Information</legend>
+		<label for="form-name"> Full Name: </label>  
+			<input type="text" name="_name_field" id= "form-name"/>
+     
+		<label for="form-address"> Billing Address: </label>
+			<input type="text" name="address_field" id= "form-address"/>
 
-	  <legend>Student Information</legend>
+		<label for="form-city"> City:</label>
+			<input type="text" name="city_field" id= "form-city"/>
+			
+		<label for="form-state"> State: </label>
+			<input type="text" name="state_field" id= "form-state" maxlength="2"/>
 
-     <label> Full Name:   
-       <input type="text" name="_name_field" id= "form-name"/>
-     </label>
-
-     <label> Billing Address: 
-       <input type="text" name="address_field" id= "form-address"/>
-     </label>
-
-     <label> City:
-   	   <input type="text" name="city_field" id= "form-city"/>
-     </label>
-
-	   <label> State:
-   	   <input type="text" name="state_field" id= "form-state" maxlength="2"/>
-     </label>
-
-	   <label> Postal Code:
+	   <label for="form-postal"> Postal Code: </label>
    	   <input type="text" name="postal_field" id= "form-postal" maxlength="5"/>
-     </label>
-
+	
   <!-- Drop down menu implemented for semester -->
      <p> Semester </p>
 	   <select name="sem_field">
@@ -47,18 +54,16 @@
          <option value="Fall '15"> Fall 2015 </option>
          <option value="Spring '16"> Spring 2016 </option>
      </select>
-  </fieldset>
-
-    <!--Payment information starts below-->
+	</fieldset>
+	</form>
+    <!--Payment information for Checking/Savings starts below-->
 	<fieldset>
     <legend>Payment Information</legend>
-     <label> Payment Date:   
+     <label for="form-date"> Payment Date: </label>
        <input type="date" name="date_field" id= "form-date"/>
-     </label>
 
-     <label> Payment Amount: 
+     <label for="form-amount"> Payment Amount: </label>
        <input type="text" name="amount_field" class= "form-amount"  maxlength="50"/>
-     </label>
 	
      <p> Account Type: </p>
      <select name="account_field">
@@ -67,37 +72,57 @@
        <option value="Savings"> Savings  </option>
      </select>
 
-     <label> Routing Number:
+     <label for="form-routing"> Routing Number: </label>
        <input type="text" name="routing_field" id= "form-routing"  maxlength="9"/>
-     </label>
 	
-	   <label> Account Number:
+	   <label for="form-number"> Account Number: </label>
        <input type="text" name="number_field" id= "form-number"  maxlength="12"/>
-     </label>
 
-		 <label> Email Address:
+		 <label for="form-email"> Email Address: </label>
    	   <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50"/>
-     </label>
+  </fieldset>
+<!--Payment information for Credit cards starts below-->
+<fieldset>
+    <legend>Payment Information</legend>
+     <label for="form-date"> Payment Date: </label>
+       <input type="date" name="date_field" id= "form-date"/>
+
+     <label for="form-amount"> Payment Amount: </label>
+       <input type="text" name="amount_field" class= "form-amount"  maxlength="50"/>
+
+     <label for="form-card"> Cardholder Name: </label>
+       <input type="text" name="card_field" id= "form-card"  maxlength="50"/>
+	
+	   <label for="form-cnumber"> Card Number: </label>
+       <input type="text" name="cnumber_field" id= "form-cnumber"  maxlength="16"/>
+	   
+	   <label for="form-expiration"> Card Expiration: </label>
+       <input type="text" name="expiration_field" id= "form-expiration"  maxlength="5"/>
+	   
+	   <label for="form-CVV"> CVV: </label>
+       <input type="text" name="cvv_field" id= "form-cvv"  maxlength="3"/>
+
+		 <label for="form-email"> Email Address: </label>
+   	   <input type="text" name="email_field" id="form-email" value="example@hawk.iit.edu" maxlength="50"/>
   </fieldset>
 
-<!-- Reviewing details from below-->
-
+<!-- Reviewing details starts below-->
   <fieldset>
     <legend>Review Payment Information</legend>
 
-    <label> Payment Amount:
+    <label for="form-amount"> Payment Amount: </label>
       <input type="text" name="amount_field" class= "form-amount" value ="101.00"/>
-    </label>
 
-    <label> Payment Type:
-   	  <input type="text" name="type_field" id="form-type" value="Checking or Savings" maxlength="50"/>
-    </label>
+    <label for="form-type"> Payment Type: <label>
+   	  <input type="text" name="type_field" id="form-type" value="Checking/Savings or CC" maxlength="50"/>
   </fieldset>
 
        <!-- Sending information and sumbitting form -->
-  <input type="submit" value ="Submit Payment">
-
+	<input type="button" onclick="location.href='balance.html';" value="Back" class="back_to_balance" />
+	<input type="button" onclick="location.href='receipt.html';" value="Submit Payment" />
+</div>
 </body>
+
 
 </html>
 
