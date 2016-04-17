@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 h2 {
@@ -27,11 +27,25 @@ h2 {
   margin-bottom: .5em;
 }
 
+h3 {
+	font-weight: bold;
+}
+
 span {
   color: crimson;
   font-size: 1.5em;
 }
 
+select{
+	background-color: rgba(10,10,10, .1) ;
+	color:ghostwhite;
+	padding: 0.5em;
+	border-radius: .5em;
+}
+
+legend{
+	text-align: left;
+}
 
 /*Classes and ids for layout*/
 #banner {
@@ -41,31 +55,42 @@ span {
   text-align: center;
 }
 
-
 .wrapper {
-  background-color: rgba(10,10,10, .4);
-  padding: 2em;
+  background-color: rgba(10,10,10, .55);
+  padding: 1em;
 }
 
 .wrapper label {
   color: ghostwhite;
 }
 
-.wrapper input {
+.wrapper input, button {
   color: white;
-  display: block;
-  margin: 1em 0;
+  display: inline-block;
   background-color: transparent;
   border: 1px solid white;
   padding: .5em;
   border-radius: .5em;
+  margin-bottom: 1.5em;
+  margin-top: .5em;
+}
+.back_buttons{
+	float:left;
+}
+.next_buttons{
+	float:right;
 }
 
 /*Specific to certain pages*/
 
 /*Login*/
+
 .login {
   max-width: 40em;
+}
+
+.login input, button{
+	display:block;
 }
 
 .logo {
@@ -85,6 +110,12 @@ span {
 }
 
 /*Portal Dashboard*/
+#btn_logOut{
+	width:7em;
+	float:right;
+	font-size: .85em;
+	
+}
 #main-container{
   display:flex;
   flex-flow: row wrap;
@@ -123,11 +154,102 @@ span {
 }
 
 
+
 .tubewhite {
   background: url("images/tubewhite.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
+/*Balance Page***********/
+#balance_page{
+	color:ghostwhite;
+	padding-bottom: 4em;
+}
+
+#balance_page .labelsdiv {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/*#balance_page label {
+ display: block;
+  margin-bottom: 1.95em;
+  max-width: 100%;
+}*/
+
+#balance_page .inputsdiv {
+ display: inline-block;
+ float: right;
+  max-width: 100%;
+}
+
+.inputsdiv input, radio {
+  display: block;
+  max-width: 100%;
+}
+
+#payment_amount{
+	display: none;
+	width: 100%;
+}
+
+fieldset {
+  border: 0px solid white;
+  
+}
+
+textarea{
+	border-radius: 0.5em;
+}
+
+.display_balance{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:baseline;
+
+}
+
+#btn_pay{
+	min-width:30%;
+	float:right;
+}
+
+#payment_amount input{
+	margin-bottom:0;
+}
+#full_amount{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/*Payment Page*/
+
+#payment_page{
+  color:ghostwhite;
+  max-width: 40em;
+  
+}
+
+
+form p label{
+	display:block;
+	float:left;
+	width:100%;
+	padding:0.5em 0.3em 0 0.3em;
+	text-align: left;
+	
+}
+#form_account,#form_cc{
+	display:none;
+}
+
+/* Receipt */
+#receipt_page.wrapper{
+background: linear-gradient(to bottom, #45484d 0%,rgba(0,0,0, .6)100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
 /*For larger screens*/
 @media screen and (min-width: 21.25em) {
   .sections img {
@@ -136,16 +258,36 @@ span {
     top: 1em;
     display: inline;
   }
+  #balance_page{
+	max-width: 40em;
+  }
+form p label{
+	width:35%;
+	text-align:right;
+}
+#payment_amount input{
+	margin-bottom:1.5em;
+}
+legend{
+	text-align: center;
+}
 }
 
 
+
 @media screen and (min-width: 37.5em) {
+  
+  h1 {
+    font-size: 3em;
+  }
   
   .wrapper {
     margin: 2em;
     border: 1px solid;
     border-radius: .5em;
+    padding: 2em;
   }
+  
   
   .sections {
     align-self: flex-end;
@@ -155,9 +297,19 @@ span {
     padding: 1em 1em;
     background-color: rgba(45, 45, 45, .5);
     border-radius: 10px;
-
     font-family: 'Futura', sans-serif;
 
   }
+  #balance_page, #payment_page{
+	margin: 1em auto;
+  }
+  
+  fieldset {
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: .5em;
+    margin-bottom: 1.5em;
+  }
+  
   
 }
